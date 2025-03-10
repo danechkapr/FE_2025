@@ -1,0 +1,605 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+.container {
+  width: 90%;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #fff;
+  z-index: 999;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.logo img {
+  height: 40px;
+  display: block;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+}
+
+.nav li {
+  margin-left: 20px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #333;
+  padding: 5px 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: color 0.3s;
+}
+
+.nav a:hover {
+  color: #007bff;
+}
+
+.hero {
+  padding-top: 70px;
+  min-height: 100vh;
+  background: url("../img/lady.jpg") no-repeat center center/cover;
+  background-position: 40% center; /* базова позиція для desktop і tablet */
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.hero-overlay {
+  width: 100%;
+  height: 100%;
+}
+
+.hero-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.hero-text {
+  flex: 1 1 300px;
+  text-align: left;
+  color: #000;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  color: #000;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  color: #777;
+  margin-bottom: 20px;
+}
+
+.hero-icons a {
+  display: inline-block;
+  margin-right: 10px;
+  color: #333;
+  font-size: 1.2rem;
+  transition: color 0.3s;
+}
+
+.hero-icons a:hover {
+  color: #007bff;
+}
+
+.about {
+  padding: 80px 0;
+}
+
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 40px;
+}
+
+.about-image,
+.about-text {
+  flex: 1 1 400px;
+}
+
+.about-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.about-text h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.about-text h3 {
+  font-size: 1rem;
+  font-weight: 300;
+  color: #007bff;
+  margin-bottom: 20px;
+}
+
+.about-text p {
+  margin-bottom: 15px;
+  font-size: 1rem;
+}
+
+.services {
+  padding: 80px 0;
+  /* Змінено позицію фону на left center */
+  background: url("../img/services_bg.jpg") no-repeat left center/cover;
+  position: relative;
+}
+
+.services .services-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.services-header h2 {
+  font-size: 2rem;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.services-header h4 {
+  font-size: 1rem;
+  font-weight: 300;
+  color: #777;
+}
+
+.service-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.service-cards .card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: left;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.service-cards .card img {
+  display: block;
+  margin-bottom: 10px;
+  transform: scale(0.8);
+}
+
+.service-cards .card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.service-cards .card p {
+  font-size: 1rem;
+  color: #555;
+}
+
+.pricing {
+  padding: 80px 0;
+  background: url("../img/pricing_bg.jpg") no-repeat center/cover;
+  position: relative;
+}
+
+.pricing h2 {
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 2.2rem;
+  color: #333;
+}
+
+.pricing h4 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 1rem;
+  font-weight: 300;
+  color: #777;
+}
+
+.pricing-cards {
+  display: flex;
+  justify-content: center;
+  gap: 0;
+  flex-wrap: wrap;
+}
+
+.pricing .card {
+  background: #24c1f0;
+  color: #fff;
+  width: 225px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  padding: 20px;
+}
+
+.middle-card {
+  width: 250px;
+  margin-top: -20px;
+  border: 2px solid #25588f;
+  background: #fff;
+  color: #25588f;
+  padding: 20px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.pricing .card h3,
+.middle-card h3 {
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+}
+
+.pricing .price,
+.middle-card .price {
+  font-size: 4rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.pricing ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 15px;
+}
+
+.pricing ul li {
+  margin-bottom: 5px;
+}
+
+.pricing .btn {
+  background: #fff;
+  color: #25588f;
+  border: 2px solid #25588f;
+  padding: 10px 15px;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.pricing .btn:hover {
+  background: #25588f;
+  color: #fff;
+}
+
+.contact {
+  background: #fff;
+  padding: 0;
+}
+
+.contact-container {
+  display: flex;
+  align-items: stretch;
+  width: 100%;
+  min-height: 500px;
+}
+
+.contact-image {
+  width: 50%;
+  margin-left: 0;
+  background: #fff;
+}
+
+.contact-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.contact-form {
+  width: 50%;
+  padding: 40px;
+  background: #fff;
+  text-align: center;
+}
+
+.contact-form h2 {
+  margin-bottom: 10px;
+  font-size: 1.8rem;
+}
+
+.contact-subtitle {
+  font-size: 1rem;
+  font-weight: 300;
+  color: #777;
+  margin-bottom: 20px;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  font-size: 1rem;
+  background: transparent;
+  font-style: italic;
+}
+
+.contact-form form input:focus {
+  outline: none;
+  border-bottom-color: #007bff;
+}
+
+.submit-btn {
+  background: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  padding: 10px 20px;
+  font-size: 1rem;
+  width: auto;
+  align-self: center;
+  transition: background 0.3s;
+}
+
+.submit-btn:hover {
+  background: #0056b3;
+}
+
+.up-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: #007bff;
+  color: #fff;
+  padding: 15px;
+  border-radius: 50%;
+  text-align: center;
+  text-decoration: none;
+  z-index: 1000;
+  transition: background 0.3s;
+}
+
+.up-btn:hover {
+  background: #0056b3;
+}
+
+footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
+
+/* =================== Mobile Styles =================== */
+@media (max-width: 767px) {
+  .header-container {
+    flex-direction: column;
+    gap: 10px;
+    padding: 0 10px;
+    margin-left: 10px;
+  }
+  .logo {
+    margin-bottom: 10px;
+  }
+  .nav ul {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    padding: 0 10px;
+  }
+  .nav li {
+    margin: 5px 10px;
+    font-size: 0.9rem;
+  }
+  .hero {
+    background-size: cover;
+    background-position: 55% center; /* для мобільних залишаємо зміщення */
+    min-height: calc(100vh - 50px);
+  }
+  .hero-content {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 40px;
+    padding-bottom: 10px;
+  }
+  .hero-text,
+  .hero-image {
+    flex: none;
+    text-align: center;
+  }
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .about-text {
+    margin-top: 0;
+    padding-top: 10px;
+  }
+  .about-image img {
+    margin-top: 0;
+    width: 100%;
+  }
+  .service-cards {
+    grid-template-columns: 1fr;
+  }
+  .services {
+    padding: 80px 10px;
+  }
+  .pricing-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+  .pricing .card {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .middle-card {
+    margin-top: 0;
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .pricing {
+    padding: 80px 10px;
+  }
+  .contact-container {
+    flex-direction: column;
+  }
+  .contact-image,
+  .contact-form {
+    width: 100%;
+  }
+  .contact-form {
+    text-align: center;
+  }
+  .submit-btn {
+    align-self: center;
+  }
+  .make-an-appointment {
+    display: block;
+    text-align: center;
+  }
+  .make-an-appointment h1,
+  .make-an-appointment p {
+    margin: 0 auto;
+  }
+}
+
+/* =================== Tablet Styles =================== */
+@media (min-width: 768px) and (max-width: 1279px) {
+  .service-cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  /* Забезпечуємо позиціювання lady.jpg на 40% для планшета */
+  .hero {
+    background-position: 40% center;
+  }
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+  .hero {
+    background-size: cover;
+  }
+  .make-an-appointment {
+    display: block;
+    text-align: center;
+  }
+  .make-an-appointment::after {
+    content: "Appointment";
+    display: block;
+  }
+
+  /* --- HERO (lady.jpg) adjustments --- */
+  .hero {
+    /* Reduce height so that width expands and height decreases.
+       Adjust these values as needed */
+    min-height: 80vh;
+    background-size: cover; /* Ensures the image remains proportional */
+    /* You can override via CSS variables or directly here */
+  }
+
+  /* Increase overall text size by 10% */
+  body {
+    font-size: 110%;
+  }
+
+  /* --- PRICING/ OUR SPECIAL OFFERS --- */
+  /* Make pricing cards slightly narrower compared to Desktop */
+  .pricing-cards .card {
+    /* Example: allowing the center card to still protrude but cards be a bit more compact */
+    max-width: 90%; /* Adjust as needed */
+    margin: 0 auto;
+  }
+  .middle-card {
+    margin-top: -20px;
+  }
+
+  /* --- SERVICES BACKGROUND --- */
+  .services {
+    /* Ensure that services_bg.jpg always shows its left side.
+       You can adjust the value "left center" as required */
+    background-position: left center;
+  }
+
+  /* --- CONTACT SECTION --- */
+  .contact-form {
+    text-align: left; /* Button Submit and "Make An Appointment AND WE WILL CONTACT YOU" left aligned */
+  }
+}
+
+/* =================== Desktop Styles =================== */
+@media (min-width: 1280px) {
+  .hero-text h1 {
+    font-size: 3rem;
+  }
+  /* --- HERO (lady.jpg) adjustments --- */
+  .hero {
+    /* FULL-SIZE: change these values as needed */
+    min-height: 100vh; /* Full viewport height */
+    background-size: cover; /* Ensures the image fills the space */
+    /* You can adjust the width/height via custom variables if desired */
+  }
+
+  /* --- ABOUT SECTION (tools.png) --- */
+  .about-image img {
+    width: 50%; /* Image occupies from left to center */
+    height: auto;
+    display: block;
+  }
+
+  /* --- PRICING/ OUR SPECIAL OFFERS --- */
+  .pricing {
+    background-size: cover; /* Full screen background */
+    padding: 80px 10px; /* 10px left/right gap */
+  }
+  /* Increase the width of the two side cards by 20% */
+  .pricing-cards .card {
+    width: calc(225px * 1.2); /* Adjust the multiplier if needed */
+  }
+  /* Center card (“Eye Checkup”) retains its vertical protrusion */
+  .middle-card {
+    margin-top: -20px;
+    /* (You may adjust padding/margins here to control the protrusion) */
+  }
+
+  /* --- CONTACT SECTION --- */
+  .contact-form {
+    text-align: left; /* Align the heading, text, and the Submit button to the left */
+  }
+}
