@@ -1,6 +1,4 @@
-/* eslint.config.js — налаштування для flat config без модулів */
 
-/** @type {import('eslint').FlatConfig[]} */
 const config = [
   {
     languageOptions: {
