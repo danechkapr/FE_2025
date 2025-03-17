@@ -21,7 +21,7 @@ body {
     padding: 15px;
     background: white;
     border-radius: 10px;
-    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2); /* Сильніша тінь */
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2); 
     position: relative;
     transition: transform 0.3s ease-in-out, z-index 0.2s ease;
     margin-top: -85px;
@@ -72,12 +72,12 @@ body {
 .card-actions {
     position: absolute;
     top: -25px;
-    right: 5px; /* Зменшено, щоб кнопки не стрибали */
+    right: 5px; 
     display: flex;
     gap: 5px;
     transition: top 0.3s ease-in-out, opacity 0.3s ease-in-out;
     opacity: 0;
-    pointer-events: none; /* Забороняє взаємодію, коли картка не в активному стані */
+    pointer-events: none;
 }
 
 .user-card:hover .card-actions {
