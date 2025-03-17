@@ -1,0 +1,139 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #f0f0f0;
+    overflow: hidden;
+}
+
+.user-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.user-card {
+    width: 300px;
+    padding: 15px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2); /* Сильніша тінь */
+    position: relative;
+    transition: transform 0.3s ease-in-out, z-index 0.2s ease;
+    margin-top: -85px;
+    z-index: 1;
+}
+
+.user-card:hover {
+    transform: scale(1.05);
+    z-index: 10;
+}
+
+.card-header {
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+}
+
+.card-username {
+    text-align: center;
+    color: gray;
+    font-size: 14px;
+}
+
+.card-body {
+    display: flex;
+    justify-content: space-between;
+    background: #f3f3f3;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.card-section {
+    width: 33.3%;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 14px;
+}
+
+.card-section span {
+    display: block;
+    font-size: 12px;
+    color: gray;
+}
+
+.card-actions {
+    position: absolute;
+    top: -25px;
+    right: 5px; /* Зменшено, щоб кнопки не стрибали */
+    display: flex;
+    gap: 5px;
+    transition: top 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    opacity: 0;
+    pointer-events: none; /* Забороняє взаємодію, коли картка не в активному стані */
+}
+
+.user-card:hover .card-actions {
+    right: 10px;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+button {
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    border-radius: 5px;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+button.edit-btn:hover {
+    background-color: orange;
+    color: white;
+}
+
+button.delete-btn:hover {
+    background-color: red;
+    color: white;
+}
+
+button#save-button {
+    background-color: #28a745;
+    color: white;
+    margin-top: 10px;
+}
+
+button#save-button:active {
+    background-color: #218838;
+}
+
+.edit-form {
+    position: absolute;
+    right: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    display: none;
+}
+
+.hidden {
+    display: none;
+}
