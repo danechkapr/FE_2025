@@ -12,11 +12,11 @@ let currentUser = null;
 let users = [];
 
 function showLoader() {
-  loader.style.visibility = "visible";
+  loader.classList.remove("hidden");
 }
 
 function hideLoader() {
-  loader.style.visibility = "hidden";
+  loader.classList.add("hidden");
 }
 
 async function getUsers() {
